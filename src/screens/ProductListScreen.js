@@ -29,12 +29,8 @@ export default function ProductList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log("use effect is being called")
-
     const timer = setTimeout(() => {
-      console.log("Changing the state variable value");
       setLoading(false);
-      console.log("The value of loading is point 2", loading);
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -53,8 +49,6 @@ export default function ProductList() {
   }
 
   const renderItem = ({ item }) => {
-    console.log("The value of loading is point 1 ", loading);
-
     return (
       <ProductCardComponent item={item} />
     );

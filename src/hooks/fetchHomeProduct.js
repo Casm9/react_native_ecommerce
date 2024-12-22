@@ -26,8 +26,6 @@ const fetchHomeProduct = () => {
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
 
-    console.log("This hook is getting called");
-
     const fetchData = async () => {
         try {
             setIsLoading(true);
